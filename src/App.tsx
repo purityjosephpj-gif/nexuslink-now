@@ -9,6 +9,9 @@ import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
 import Marketplace from "./pages/Marketplace";
 import Taxi from "./pages/Taxi";
+import Properties from "./pages/Properties";
+import Food from "./pages/Food";
+import Errands from "./pages/Errands";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +31,9 @@ const App = () => (
           {/* Service Routes */}
           <Route path="/marketplace" element={<Marketplace />} />
           <Route path="/taxi" element={<Taxi />} />
+          <Route path="/properties" element={<Properties />} />
+          <Route path="/food" element={<Food />} />
+          <Route path="/errands" element={<Errands />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
