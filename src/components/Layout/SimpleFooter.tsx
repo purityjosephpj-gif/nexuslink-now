@@ -1,6 +1,7 @@
 import { Facebook, Twitter, Instagram, Mail, Phone, MapPin } from "lucide-react";
 
 export function SimpleFooter() {
+  console.log("SimpleFooter rendering (no router dependencies)");
   return (
     <footer className="bg-card border-t">
       <div className="container mx-auto px-4 py-12">

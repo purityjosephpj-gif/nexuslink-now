@@ -18,6 +18,8 @@ import {
 } from "lucide-react";
 
 const Index = () => {
+  console.log("Index page rendering with SimpleHeader and SimpleFooter");
+  
   return (
     <div className="min-h-screen bg-background">
       <SimpleHeader />

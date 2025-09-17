@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+// Removed Link import - using anchor tags for homepage navigation
 import { Button } from "@/components/ui/button";
 import { Menu, Search, ShoppingCart, User, Bell } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 export function SimpleHeader() {
+  console.log("SimpleHeader rendering (no router dependencies)");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
