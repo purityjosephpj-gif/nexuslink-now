@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
+// Removed Link import to avoid router context issues on homepage
 import { SimpleHeader } from "@/components/Layout/SimpleHeader";
-import { Footer } from "@/components/Layout/Footer";
+import { SimpleFooter } from "@/components/Layout/SimpleFooter";
 import { ServiceCard } from "@/components/ServiceCard";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -42,16 +42,16 @@ const Index = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/auth/register">
+              <a href="/auth/register">
                 <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 btn-gold text-lg px-8 py-6">
                   Get Started Free
                 </Button>
-              </Link>
-              <Link to="/marketplace">
+              </a>
+              <a href="/marketplace">
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-6">
                   Explore Services
                 </Button>
-              </Link>
+              </a>
             </div>
 
             {/* Quick Stats */}
@@ -235,21 +235,21 @@ const Index = () => {
             Join thousands of satisfied customers who trust QUICKLINK for all their service needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/auth/register">
+            <a href="/auth/register">
               <Button size="lg" className="btn-brand text-lg px-8 py-6">
                 Sign Up Now
               </Button>
-            </Link>
-            <Link to="/contact">
+            </a>
+            <a href="/contact">
               <Button size="lg" variant="outline" className="text-lg px-8 py-6">
                 Contact Sales
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
 
-      <Footer />
+      <SimpleFooter />
     </div>
   );
 };

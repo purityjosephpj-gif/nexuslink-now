@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Link } from "react-router-dom";
+// Using regular anchor tags to avoid router context issues
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -39,7 +39,7 @@ export function ServiceCard({ title, description, icon, href, features, gradient
           ))}
         </ul>
 
-        <Link to={href}>
+        <a href={href}>
           <Button 
             className="w-full group-hover:bg-primary/90 transition-all duration-300"
             variant="default"
@@ -47,7 +47,7 @@ export function ServiceCard({ title, description, icon, href, features, gradient
             Get Started
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Button>
-        </Link>
+        </a>
       </div>
     </Card>
   );
