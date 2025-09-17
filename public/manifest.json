@@ -1,0 +1,63 @@
+{
+  "name": "QUICKLINK SERVICES",
+  "short_name": "QuickLink",
+  "description": "Your one-stop platform for marketplace, food delivery, taxi services, property listings, and errands",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#8B0000",
+  "theme_color": "#8B0000",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "categories": ["business", "lifestyle", "shopping", "food", "travel"],
+  "lang": "en",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Marketplace",
+      "short_name": "Shop",
+      "description": "Browse and shop products",
+      "url": "/marketplace",
+      "icons": [{ "src": "/shortcut-marketplace.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Food Delivery",
+      "short_name": "Food",
+      "description": "Order food from restaurants",
+      "url": "/food",
+      "icons": [{ "src": "/shortcut-food.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Taxi Services",
+      "short_name": "Taxi",
+      "description": "Book a ride",
+      "url": "/taxi",
+      "icons": [{ "src": "/shortcut-taxi.png", "sizes": "96x96" }]
+    }
+  ]
+}
