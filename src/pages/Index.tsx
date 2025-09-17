@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Header } from "@/components/Layout/Header";
+import { SimpleHeader } from "@/components/Layout/SimpleHeader";
 import { Footer } from "@/components/Layout/Footer";
 import { ServiceCard } from "@/components/ServiceCard";
 import { Button } from "@/components/ui/button";
@@ -20,7 +20,7 @@ import {
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      <SimpleHeader />
       
       {/* Hero Section */}
       <section className="hero-section relative overflow-hidden">
