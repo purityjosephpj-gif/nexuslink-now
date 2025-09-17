@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
 import Marketplace from "./pages/Marketplace";
+import Taxi from "./pages/Taxi";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
           
           {/* Service Routes */}
           <Route path="/marketplace" element={<Marketplace />} />
+          <Route path="/taxi" element={<Taxi />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
