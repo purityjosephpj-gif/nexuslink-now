@@ -58,19 +58,19 @@ const Index = () => {
 
             {/* Quick Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
-              <div className="text-center">
-                <div className="text-3xl font-bold">1000+</div>
+              <div className="text-center animate-fade-in">
+                <div className="text-3xl font-bold">2K+</div>
                 <div className="text-white/80">Active Merchants</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold">50K+</div>
+              <div className="text-center animate-fade-in" style={{ animationDelay: '0.1s' }}>
+                <div className="text-3xl font-bold">3K+</div>
                 <div className="text-white/80">Happy Customers</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold">500+</div>
+              <div className="text-center animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                <div className="text-3xl font-bold">100+</div>
                 <div className="text-white/80">Drivers Online</div>
               </div>
-              <div className="text-center">
+              <div className="text-center animate-fade-in" style={{ animationDelay: '0.3s' }}>
                 <div className="text-3xl font-bold">24/7</div>
                 <div className="text-white/80">Support</div>
               </div>
@@ -92,89 +92,101 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ServiceCard
-              title="Marketplace"
-              description="Shop from thousands of local and international sellers. Find everything from electronics to fashion, home goods to specialty items."
-              icon={<ShoppingBag className="h-6 w-6" />}
-              href="/marketplace"
-              features={[
-                "Secure payments with M-Pesa & Cards",
-                "Fast delivery & pickup options",
-                "Verified sellers & products",
-                "24/7 customer support"
-              ]}
-              gradient="from-primary to-primary/80"
-            />
+            <div className="hover-scale animate-fade-in">
+              <ServiceCard
+                title="Marketplace"
+                description="Shop from thousands of local and international sellers. Find everything from electronics to fashion, home goods to specialty items."
+                icon={<ShoppingBag className="h-6 w-6" />}
+                href="/marketplace"
+                features={[
+                  "Secure payments with M-Pesa & Cards",
+                  "Fast delivery & pickup options",
+                  "Verified sellers & products",
+                  "24/7 customer support"
+                ]}
+                gradient="from-primary to-primary/80"
+              />
+            </div>
 
-            <ServiceCard
-              title="Food Delivery"
-              description="Order from your favorite restaurants and local eateries. Fresh meals delivered hot to your doorstep in minutes."
-              icon={<UtensilsCrossed className="h-6 w-6" />}
-              href="/food"
-              features={[
-                "Real-time order tracking",
-                "Wide restaurant selection",
-                "Scheduled deliveries",
-                "Group ordering options"
-              ]}
-              gradient="from-orange-500 to-orange-600"
-            />
+            <div className="hover-scale animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <ServiceCard
+                title="Food Delivery"
+                description="Order from your favorite restaurants and local eateries. Fresh meals delivered hot to your doorstep in minutes."
+                icon={<UtensilsCrossed className="h-6 w-6" />}
+                href="/food"
+                features={[
+                  "Real-time order tracking",
+                  "Wide restaurant selection",
+                  "Scheduled deliveries",
+                  "Group ordering options"
+                ]}
+                gradient="from-orange-500 to-orange-600"
+              />
+            </div>
 
-            <ServiceCard
-              title="Taxi Services"
-              description="Book reliable rides with professional drivers. Safe, affordable transportation whenever you need it."
-              icon={<Car className="h-6 w-6" />}
-              href="/taxi"
-              features={[
-                "Live GPS tracking",
-                "Multiple vehicle types",
-                "Upfront pricing",
-                "Safety features included"
-              ]}
-              gradient="from-blue-500 to-blue-600"
-            />
+            <div className="hover-scale animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <ServiceCard
+                title="Taxi Services"
+                description="Book reliable rides with professional drivers. Safe, affordable transportation whenever you need it."
+                icon={<Car className="h-6 w-6" />}
+                href="/taxi"
+                features={[
+                  "Live GPS tracking",
+                  "Multiple vehicle types",
+                  "Upfront pricing",
+                  "Safety features included"
+                ]}
+                gradient="from-blue-500 to-blue-600"
+              />
+            </div>
 
-            <ServiceCard
-              title="Properties & Land"
-              description="Find your dream home, office space, or investment property. Browse verified listings with detailed information."
-              icon={<Building className="h-6 w-6" />}
-              href="/properties"
-              features={[
-                "Verified property listings",
-                "Virtual tours available",
-                "Direct seller contact",
-                "Location-based search"
-              ]}
-              gradient="from-green-500 to-green-600"
-            />
+            <div className="hover-scale animate-fade-in" style={{ animationDelay: '0.3s' }}>
+              <ServiceCard
+                title="Properties & Land"
+                description="Find your dream home, office space, or investment property. Browse verified listings with detailed information."
+                icon={<Building className="h-6 w-6" />}
+                href="/properties"
+                features={[
+                  "Verified property listings",
+                  "Virtual tours available",
+                  "Direct seller contact",
+                  "Location-based search"
+                ]}
+                gradient="from-green-500 to-green-600"
+              />
+            </div>
 
-            <ServiceCard
-              title="Errands & Delivery"
-              description="Get your tasks done by trusted professionals. From document delivery to shopping assistance."
-              icon={<Package className="h-6 w-6" />}
-              href="/errands"
-              features={[
-                "Vetted service providers",
-                "Real-time updates",
-                "Insurance coverage",
-                "Custom task requests"
-              ]}
-              gradient="from-purple-500 to-purple-600"
-            />
+            <div className="hover-scale animate-fade-in" style={{ animationDelay: '0.4s' }}>
+              <ServiceCard
+                title="Errands & Delivery"
+                description="Get your tasks done by trusted professionals. From document delivery to shopping assistance."
+                icon={<Package className="h-6 w-6" />}
+                href="/errands"
+                features={[
+                  "Vetted service providers",
+                  "Real-time updates",
+                  "Insurance coverage",
+                  "Custom task requests"
+                ]}
+                gradient="from-purple-500 to-purple-600"
+              />
+            </div>
 
-            <ServiceCard
-              title="Business Solutions"
-              description="Join as a seller, restaurant, or driver. Grow your business with our platform and reach more customers."
-              icon={<Zap className="h-6 w-6" />}
-              href="/business"
-              features={[
-                "Easy onboarding process",
-                "Analytics dashboard",
-                "Marketing tools included",
-                "Competitive commission rates"
-              ]}
-              gradient="from-secondary to-yellow-600"
-            />
+            <div className="hover-scale animate-fade-in" style={{ animationDelay: '0.5s' }}>
+              <ServiceCard
+                title="Business Solutions"
+                description="Join as a seller, restaurant, or driver. Grow your business with our platform and reach more customers."
+                icon={<Zap className="h-6 w-6" />}
+                href="/business"
+                features={[
+                  "Easy onboarding process",
+                  "Analytics dashboard",
+                  "Marketing tools included",
+                  "Competitive commission rates"
+                ]}
+                gradient="from-secondary to-yellow-600"
+              />
+            </div>
           </div>
         </div>
       </section>
