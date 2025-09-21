@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -9,6 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Checkbox } from "@/components/ui/checkbox";
 import { Eye, EyeOff, Mail, Lock, User, ArrowLeft, Check, X } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useAuth } from "@/contexts/AuthContext";
 
 export default function Register() {
   const [showPassword, setShowPassword] = useState(false);
@@ -20,10 +21,19 @@ export default function Register() {
     email: "",
     password: "",
     confirmPassword: "",
-    role: "",
+    role: "customer",
     agreeToTerms: false,
   });
   const { toast } = useToast();
+  const { signUp, user } = useAuth();
+  const navigate = useNavigate();
+
+  // Redirect if already logged in
+  useEffect(() => {
+    if (user) {
+      navigate('/dashboard');
+    }
+  }, [user, navigate]);
 
   const passwordRequirements = [
     { test: (pwd: string) => pwd.length >= 12, text: "At least 12 characters" },
@@ -47,15 +57,20 @@ export default function Register() {
       return;
     }
 
-    // Simulate registration process
-    setTimeout(() => {
-      setIsLoading(false);
-      toast({
-        title: "Registration Required",
-        description: "Please connect to Supabase to enable user registration features.",
-        variant: "destructive",
-      });
-    }, 1000);
+    const { error } = await signUp(
+      formData.email,
+      formData.password,
+      formData.firstName,
+      formData.lastName,
+      formData.role
+    );
+
+    if (!error) {
+      // Redirect to login page after successful registration
+      navigate('/auth/login');
+    }
+
+    setIsLoading(false);
   };
 
   const handleGoogleSignUp = () => {

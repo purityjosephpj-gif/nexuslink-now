@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -7,6 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Separator } from "@/components/ui/separator";
 import { Eye, EyeOff, Mail, Lock, ArrowLeft } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useAuth } from "@/contexts/AuthContext";
 
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
@@ -14,20 +15,27 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { toast } = useToast();
+  const { signIn, user } = useAuth();
+  const navigate = useNavigate();
+
+  // Redirect if already logged in
+  useEffect(() => {
+    if (user) {
+      navigate('/dashboard');
+    }
+  }, [user, navigate]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
 
-    // Simulate login process
-    setTimeout(() => {
-      setIsLoading(false);
-      toast({
-        title: "Login Required",
-        description: "Please connect to Supabase to enable authentication features.",
-        variant: "destructive",
-      });
-    }, 1000);
+    const { error } = await signIn(email, password);
+    
+    if (!error) {
+      navigate('/dashboard');
+    }
+    
+    setIsLoading(false);
   };
 
   const handleGoogleSignIn = () => {
