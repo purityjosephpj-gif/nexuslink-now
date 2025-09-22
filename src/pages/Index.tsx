@@ -2,6 +2,7 @@
 import { SimpleHeader } from "@/components/Layout/SimpleHeader";
 import { SimpleFooter } from "@/components/Layout/SimpleFooter";
 import { ServiceCard } from "@/components/ServiceCard";
+import AnimatedBackground from "@/components/AnimatedBackground";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { 
@@ -25,10 +26,11 @@ const Index = () => {
       <SimpleHeader />
       
       {/* Hero Section */}
-      <section className="hero-section relative overflow-hidden">
+      <section className="hero-section relative overflow-hidden min-h-[100vh] flex items-center">
         <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/95 to-primary/80" />
+        <AnimatedBackground />
         <div className="relative container mx-auto px-4 py-20">
-          <div className="text-center text-white space-y-8 animate-fade-in">
+          <div className="text-center text-white space-y-8 animate-fade-in backdrop-blur-md bg-white/5 rounded-3xl border border-white/10 p-12 shadow-2xl">
             <Badge className="bg-white/10 text-white border-white/20 hover:bg-white/20">
               🚀 Your All-in-One Service Platform
             </Badge>
