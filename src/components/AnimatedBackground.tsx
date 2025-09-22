@@ -1,4 +1,4 @@
-import { ShoppingBag, Home, UtensilsCrossed, Car, Building, Package, Smartphone, Laptop, Pizza, Sandwich, Coffee, Camera } from "lucide-react";
+import { ShoppingBag, Home, UtensilsCrossed, Car, Building, Package, Smartphone, Laptop, Pizza, Apple, Coffee, Camera } from "lucide-react";
 
 const AnimatedBackground = () => {
   const floatingItems = [
@@ -10,7 +10,7 @@ const AnimatedBackground = () => {
     
     // Fast Food
     { icon: <Pizza className="h-8 w-8" />, position: "top-40 right-16", delay: "0.5s", type: "food" },
-    { icon: <Sandwich className="h-6 w-6" />, position: "top-24 left-1/3", delay: "1.5s", type: "food" },
+    { icon: <Apple className="h-6 w-6" />, position: "top-24 left-1/3", delay: "1.5s", type: "food" },
     { icon: <Coffee className="h-7 w-7" />, position: "top-36 right-1/4", delay: "2.5s", type: "food" },
     { icon: <UtensilsCrossed className="h-6 w-6" />, position: "top-12 left-1/2", delay: "3.5s", type: "food" },
     
